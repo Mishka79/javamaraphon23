@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("Введите числа А и Б через пробел ");
+        //System.out.print("Введите числа А и Б через пробел ");
         int a = s.nextInt();
         int b = s.nextInt();
         for (int i = a + 1; i<b; i++)
@@ -16,7 +16,7 @@ public class Task2 {
         }
         if (a>=b)
         {
-            System.out.println("Некоректный ввод");
+            System.out.println("Некорректный ввод");
         }
     }
 }

@@ -7,7 +7,7 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         String city;
         do {
-            System.out.print("Введите город ");
+            //System.out.print("Введите город ");
             city = scanner.nextLine();
             switch (city) {
                 case "Stop" :
