@@ -11,11 +11,12 @@ public class Task2 {
         Player player4 = new Player(random.nextInt(11)+90);
         Player player5 = new Player(random.nextInt(11)+90);
         Player player6 = new Player(random.nextInt(11)+90);
-        player1.info();
+        Player.info();
         Player player7 = new Player(random.nextInt(11)+90);
-        player1.info();
+        Player.info();
         while (player3.getStamina()>0)   player3.run();
-        System.out.println(player2.getCountPlayers());
+        System.out.println(Player.getCountPlayers());
+
     }
 
 }
