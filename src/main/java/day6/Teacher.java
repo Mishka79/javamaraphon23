@@ -15,23 +15,22 @@ public class Teacher {
 
     public String getPredmet() {        return Predmet;    }
     public void evaluate(Student student1) {
-        int otmetka;
         Random rand = new Random();
-       // otmetka=rand.nextInt(4)+2;
-
+        String otmetka = new String();
         switch (rand.nextInt(4)+2){
             case 2:
-              System.out.println("Преподаватель "+ this.Name+ " оценил студента с именем "+ student1.getName()+ " по предмету "+ this.Predmet+" на оценку неудовлетворительно");
+              otmetka="неудовлетворительно";
               break;
             case 3:
-              System.out.println("Преподаватель "+ this.Name+ " оценил студента с именем "+ student1.getName()+ " по предмету "+ this.Predmet+" на оценку удовлетворительно");
+              otmetka="удовлетворительно";
               break;
             case 4:
-              System.out.println("Преподаватель "+ this.Name+ " оценил студента с именем "+ student1.getName()+ " по предмету "+ this.Predmet+" на оценку хорошо");
+                otmetka="хорошо";
               break;
             case 5:
-              System.out.println("Преподаватель "+ this.Name+ " оценил студента с именем "+ student1.getName()+ " по предмету "+ this.Predmet+" на оценку отлично");
+                otmetka="отлично";
               break;
         }
+        System.out.println("Преподаватель "+ this.Name+ " оценил студента с именем "+ student1.getName()+ " по предмету "+ this.Predmet+" на оценку "+otmetka);
     }
 }
