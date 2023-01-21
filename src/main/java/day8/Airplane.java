@@ -34,8 +34,7 @@ public class Airplane {
     }
     public String toString()
     {
-        StringBuilder stringBuilder = new StringBuilder();
-       return stringBuilder.append("Изготовитель: ").append(manufactured).append(", год выпуска: ").append(year).append(", длина: ").append(length).append(", вес: ").append(weigth).append(", количество топлива в баке: ").append(fuel).toString();
+       return "Изготовитель: "+ manufactured+ ", год выпуска: "+ year+ ", длина: "+length+", вес: "+ weigth+ ", количество топлива в баке: "+fuel;
     }
 
 
