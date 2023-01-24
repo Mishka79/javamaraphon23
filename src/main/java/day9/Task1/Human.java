@@ -10,7 +10,8 @@ public class Human {
     public String getName() {
         return name;
     }
-    public void printInfo(){
-        System.out.println("Этот человек с именем "+this.name);
+
+    public void printInfo() {
+        System.out.println("Этот человек с именем " + this.name);
     }
 }
