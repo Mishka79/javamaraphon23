@@ -1,7 +1,7 @@
 package day9.Task1;
 
 public class Teacher extends Human {
-    public String subjectName;
+    private String subjectName;
 
     public String getSubjectName() {
         return subjectName;
@@ -13,7 +13,7 @@ public class Teacher extends Human {
     }
 
     public void printInfo() {
-        System.out.println("Этот человек с именем " + this.name);
+        super.printInfo();
         System.out.println("Этот преподаватель с именем " + super.name);
     }
 }

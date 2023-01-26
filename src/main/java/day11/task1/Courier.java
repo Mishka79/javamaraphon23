@@ -4,18 +4,14 @@ public class Courier implements Worker {
     private int salary;
     private boolean isPayed;
     private Warehouse warehouse;
-    public static int bonus;
+
 
     public int getSalary() {
         return salary;
     }
 
-    public boolean isPayed() {
-        return isPayed;
-    }
-
-    public String toString() {
-        return ""+getSalary()+bonus;
+       public String toString() {
+        return "" + getSalary();
     }
 
     public Courier(Warehouse warehouse) {
@@ -38,9 +34,9 @@ public class Courier implements Worker {
             System.out.println("Бонус уже был выплачен");
         } else if (warehouse.countPickedOrders < 10000) {
             System.out.println("Бонус пока не доступен");
-        } else if (warehouse.countPickedOrders == 10000){
+        } else if (warehouse.countPickedOrders == 10000) {
             isPayed = true;
-            bonus=50000;
+            salary += 50000;
         }
     }
 }

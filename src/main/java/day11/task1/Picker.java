@@ -4,18 +4,15 @@ public class Picker implements Worker {
     private int salary;
     private boolean isPayed;
     private Warehouse warehouse;
-    public static int bonus;
+
 
     public int getSalary() {
         return salary;
     }
 
-    public boolean isPayed() {
-        return isPayed;
-    }
 
     public String toString() {
-        return  ""+getSalary()+bonus;
+        return  ""+getSalary();
     }
 
     public Picker (Warehouse warehouse) {
@@ -37,7 +34,7 @@ public class Picker implements Worker {
             System.out.println("Бонус пока не доступен");
         } else {
             isPayed = true;
-            bonus= 70000;
+            salary+= 70000;
         }
     }
 }

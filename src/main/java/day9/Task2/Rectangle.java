@@ -1,7 +1,7 @@
 package day9.Task2;
 
 public class Rectangle extends Figure {
-    public double dlina, shirina;
+    private double dlina, shirina;
 
     public Rectangle(double dlina, double shirina, String color) {
         super(color);

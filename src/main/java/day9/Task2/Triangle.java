@@ -3,7 +3,7 @@ package day9.Task2;
 import static java.lang.Math.sqrt;
 
 public class Triangle extends Figure {
-    public double a, b, c;
+    private double a, b, c;
     private double p;
 
     public Triangle(double a, double b, double c, String color) {

@@ -1,7 +1,7 @@
 package day9.Task1;
 
 public class Student extends Human {
-    public String groupName;
+    private String groupName;
 
     public String getGroupName() {
         return groupName;
@@ -13,7 +13,7 @@ public class Student extends Human {
     }
 
     public void printInfo() {
-        System.out.println("Этот человек с именем " + this.name);
+        super.printInfo();
         System.out.println("Этот студент с именем " + super.name);
     }
 }
