@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Task3 {
+    public static final int YEAR=2000;
     public static void main(String[] args) {
     MusicBand band1 = new MusicBand("BI-2",2000);
     MusicBand band2 = new MusicBand("Metallica",2007);
@@ -17,7 +18,7 @@ public class Task3 {
     MusicBand band9 = new MusicBand("Kino",1989);
     MusicBand band10 = new MusicBand("Mummi trol",2011);
     List<MusicBand> list = new ArrayList<>();
-    List<MusicBand> list3 = new ArrayList<>();
+
     list.add(band1);
     list.add(band2);
     list.add(band3);
@@ -29,7 +30,7 @@ public class Task3 {
     list.add(band9);
     list.add(band10);
     Collections.shuffle(list);
-    list3=groupsAfter2000(list);
+    List <MusicBand>list3=new ArrayList<>(groupsAfter2000(list));
     for (int i=0;i<list.size();i++){
         System.out.println(list.get(i).toString());}
         System.out.println();
@@ -42,7 +43,7 @@ public class Task3 {
         List<MusicBand> bands1=new ArrayList<>();
 
         for (int i=0; i< bands.size();i++){
-            if (bands.get(i).getYear()>2000){ bands1.add(bands.get(i));}
+            if (bands.get(i).getYear()>YEAR){ bands1.add(bands.get(i));}
             }
         return bands1;
         }

@@ -3,8 +3,8 @@ package day12.task5;
 import java.util.List;
 
 public class MusicArtist {
-    String member;
-    int age;
+    private String member;
+    private int age;
 
     public MusicArtist(String member, int age) {
         this.member = member;
