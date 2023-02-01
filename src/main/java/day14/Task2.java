@@ -14,10 +14,10 @@ public class Task2 {
     }
 
     public static List<String> parseFileToStringList(File file) {
-        Scanner scanner = null;
+
         List<String> list = new ArrayList<>();
         try {
-            scanner = new Scanner(file);
+            Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String line = (scanner.nextLine());
                 String[] line2 = line.split(" ");
@@ -25,9 +25,9 @@ public class Task2 {
                     if (Integer.parseInt(line2[1]) > 0) {
                         list.add(line);
                     } else try {
-                        throw new IOException();
+                        throw new IOException("Некорректный входной файл");
                     } catch (IOException e) {
-                        System.out.println("Некорректный входной файл");
+                        System.out.println(e.getMessage());
                         list = null;
                         break;
                     }

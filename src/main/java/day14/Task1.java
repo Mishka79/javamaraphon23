@@ -21,17 +21,16 @@ public class Task1 {
             Scanner scanner = new Scanner(file);
             String line = scanner.nextLine();
             String[] numbersString = line.split(" ");
-
             int counter = 0;
             int sum = 0;
             for (String number : numbersString) {
                 sum += Integer.parseInt(number);
                 counter++;
             }
-            if (counter != 10) try {
-                throw new IOException();
+            if (counter != N) try {
+                throw new IOException("Некорректный входной файл");
             } catch (IOException e) {
-                System.out.println("Некорректный входной файл");
+                System.out.println(e.getMessage());
             }
             else {
                 System.out.println(sum);

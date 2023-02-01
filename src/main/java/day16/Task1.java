@@ -11,9 +11,9 @@ public class Task1 {
     }
 
     public static void printResult(File file) {
-        Scanner scanner = null;
+
         try {
-            scanner = new Scanner(file);
+            Scanner scanner = new Scanner(file);
             String[] numbers = scanner.nextLine().split(" ");
             double sum = 0;
             for (int i = 0; i < numbers.length; i++) {
