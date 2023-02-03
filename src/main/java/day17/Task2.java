@@ -3,8 +3,11 @@ package day17;
 import java.sql.Array;
 
 public class Task2 {
+    private static final int N=8;
     public static void main(String[] args) {
-        ChessPiece[][] board = new ChessPiece[8][8];
+        ChessPiece[][] board = new ChessPiece[N][N];
+
+
         board[0][0] = ChessPiece.BISHOP_BLACK;
         board[0][1] = ChessPiece.EMPTY;
         board[0][2] = ChessPiece.EMPTY;

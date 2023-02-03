@@ -8,8 +8,8 @@ public class ChessBoard {
     }
 
     public void print() {
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
                 System.out.print(this.board[i][j].getName());
             }
             System.out.println();
