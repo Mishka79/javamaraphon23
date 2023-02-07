@@ -9,7 +9,6 @@ public class Task3 {
 
     public static void main(String[] args) {
         Node root = new Node();
-        List<Node> nodes = new ArrayList<>();
         root.setValue(20);
         insertNode(14, root);
         insertNode(11, root);
@@ -23,24 +22,7 @@ public class Task3 {
         insertNode(27, root);
         insertNode(24, root);
         insertNode(150, root);
-
-        dfs(root, nodes);
-
-        for (int i = 0; i < nodes.size(); i++) {
-
-            for (int j = i + 1; j < nodes.size(); j++) {
-                if (nodes.get(j).getValue() < nodes.get(i).getValue()) {
-                    nodes.add(i, nodes.get(j));
-                    nodes.remove(j + 1);
-                }
-            }
-
-        }
-
-        for (int n = 0; n < nodes.size(); n++) {
-            System.out.print(nodes.get(n).toString());
-        }
-
+        dfs(root);
     }
 
     public static void insertNode(int value, Node root) {
@@ -68,25 +50,15 @@ public class Task3 {
         }
     }
 
-    public static void dfs(Node root, List<Node> nodes) {
+    public static void dfs(Node root){
 
-        Node currentNode = root;
-        if (currentNode.getLeftCh() != null & currentNode.getRightCh() != null) {
-            nodes.add(currentNode);
-            dfs(currentNode.getLeftCh(), nodes);
-            dfs(currentNode.getRightCh(), nodes);
-        }
-        if (currentNode.getRightCh() != null & currentNode.getLeftCh() == null) {
-            nodes.add(currentNode);
-            dfs(currentNode.getRightCh(), nodes);
-        }
-        if (currentNode.getLeftCh() != null & currentNode.getRightCh() == null) {
-            nodes.add(currentNode);
-            dfs(currentNode.getLeftCh(), nodes);
-        }
-        if (currentNode.getRightCh() == null & currentNode.getLeftCh() == null) {
-            nodes.add(currentNode);
+        if (root == null)
+            return;
+        dfs(root.getLeftCh());
+        System.out.print(root.getValue() + " ");
+        dfs(root.getRightCh());
 
-        }
+
+
     }
 }
